@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JGualpaExamen.Views.vLogin"
+             Title="vLogin">
+    <VerticalStackLayout
+        Padding="25"
+        Spacing="20">
+        <Image Source="logo.jpg"
+               WidthRequest="200"/>
+        <Label 
+            Text="Login"
+            VerticalOptions="Center" 
+            TextColor="Red"
+            FontSize="20"
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"
+            HorizontalOptions="Center" />
+        <Grid
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Usuario"
+                   Grid.Row="0"
+                   Grid.Column="0"/>
+            <Entry x:Name="txtUsuario"
+                   Placeholder="Ingrese Usuario"
+                   Grid.Row="0"
+                   Grid.Column="1"/>
+            <Label Text="Contraseña"
+                   Grid.Row="1"
+                   Grid.Column="0"/>
+            <Entry x:Name="txtContraseña"
+                   Placeholder="Ingrese Contraseña"
+                   Grid.Row="1"
+                   Grid.Column="1"/>
+            <Button x:Name="btnIniciarSesion"
+                Text="Iniciar Sesion"
+                Clicked="btnIniciarSesion_Clicked"
+                Grid.Row="2"
+                Grid.Column="0"/>
+            <Button x:Name="AcercaDe"
+                   Text="Ingrese Contraseña"
+                   Grid.Row="2"
+                   Grid.Column="1"/>
+        </Grid>
+
+
+    </VerticalStackLayout>
+</ContentPage>
