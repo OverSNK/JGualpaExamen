@@ -25,5 +25,18 @@ public partial class vRegistro : ContentPage
         txtPagoMensual.Text = ValorCuota.ToString();
 
     }
+    private async void btnResumen_Clicked(object sender, EventArgs e)
+    {
+        string nombre = txtNombre.Text;
+        string apellido = txtApellido.Text;
+        string va = pkVoliamperios.SelectedItem?.ToString() ?? "";
+        string ciudad = pkCiudad.SelectedItem?.ToString() ?? "";
+        DateTime fecha = datePicker.Date; 
+        decimal.TryParse(txtMontoInicial.Text, out decimal montoInicial);
+        decimal.TryParse(txtPagoMensual.Text, out decimal cuotaMensual);
 
+        string usuario = lblUsuario.Text;
+
+        await Navigation.PushAsync(new vResumen(usuario, nombre, apellido, va, fecha, ciudad, montoInicial, cuotaMensual));
+    }
 }

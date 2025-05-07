@@ -69,6 +69,7 @@
            Grid.Column="0"
            VerticalOptions="Center" />
         <DatePicker Grid.Row="0"
+           x:Name="datePicker"
            Grid.Column="1"
            VerticalOptions="Center" />
 
@@ -109,5 +110,9 @@
            Grid.Column="1"
            VerticalOptions="Center" />
         </Grid>
+        <Button Text="Ver Resumen"
+        x:Name="btnResumen"
+        Clicked="btnResumen_Clicked"
+        Margin="0,20,0,0"/>
     </VerticalStackLayout>
 </ContentPage>
